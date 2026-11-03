@@ -1,0 +1,23 @@
+[0.009s] Invoking command in '/home/jfetko/bard/vlm-cbf/src/build/asv_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/jfetko/bard/vlm-cbf/src/asv_control -DCMAKE_INSTALL_PREFIX=/home/jfetko/bard/vlm-cbf/src/install/asv_control
+[0.024s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.131s] -- Found Python3: /home/jfetko/Documents/school/26-27/sem1/ece514/project/venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.223s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.239s] Traceback (most recent call last):
+[0.239s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[0.239s]     from catkin_pkg.package import parse_package_string
+[0.239s] ModuleNotFoundError: No module named 'catkin_pkg'
+[0.242s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[0.242s]   
+[0.242s]   execute_process(/home/jfetko/Documents/school/26-27/sem1/ece514/project/venv/bin/python3
+[0.242s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[0.242s]   /home/jfetko/bard/vlm-cbf/src/asv_control/package.xml
+[0.242s]   /home/jfetko/bard/vlm-cbf/src/build/asv_control/ament_cmake_core/package.cmake)
+[0.242s]   returned error code 1
+[0.242s] Call Stack (most recent call first):
+[0.242s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.242s]   /opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[0.242s]   CMakeLists.txt:23 (ament_lint_auto_find_test_dependencies)
+[0.242s] 
+[0.243s] [0m
+[0.243s] -- Configuring incomplete, errors occurred!
+[0.245s] Invoked command in '/home/jfetko/bard/vlm-cbf/src/build/asv_control' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/jfetko/bard/vlm-cbf/src/asv_control -DCMAKE_INSTALL_PREFIX=/home/jfetko/bard/vlm-cbf/src/install/asv_control

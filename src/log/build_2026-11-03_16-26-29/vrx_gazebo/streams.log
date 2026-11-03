@@ -1,0 +1,22 @@
+[0.010s] Invoking command in '/home/jfetko/bard/vlm-cbf/src/build/vrx_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/jfetko/bard/vlm-cbf/src/vrx/vrx_urdf/vrx_gazebo -DCMAKE_INSTALL_PREFIX=/home/jfetko/bard/vlm-cbf/src/install/vrx_gazebo
+[0.029s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.132s] -- Found Python3: /home/jfetko/Documents/school/26-27/sem1/ece514/project/venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.257s] Traceback (most recent call last):
+[0.257s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[0.257s]     from catkin_pkg.package import parse_package_string
+[0.257s] ModuleNotFoundError: No module named 'catkin_pkg'
+[0.260s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[0.260s]   
+[0.260s]   execute_process(/home/jfetko/Documents/school/26-27/sem1/ece514/project/venv/bin/python3
+[0.260s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[0.260s]   /home/jfetko/bard/vlm-cbf/src/vrx/vrx_urdf/vrx_gazebo/package.xml
+[0.260s]   /home/jfetko/bard/vlm-cbf/src/build/vrx_gazebo/ament_cmake_core/package.cmake)
+[0.260s]   returned error code 1
+[0.260s] Call Stack (most recent call first):
+[0.260s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.260s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:60 (ament_package_xml)
+[0.260s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)
+[0.260s]   CMakeLists.txt:26 (ament_python_install_package)
+[0.261s] 
+[0.261s] [0m
+[0.261s] -- Configuring incomplete, errors occurred!

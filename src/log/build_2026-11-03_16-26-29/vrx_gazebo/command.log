@@ -1,0 +1,1 @@
+Invoking command in '/home/jfetko/bard/vlm-cbf/src/build/vrx_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/jfetko/bard/vlm-cbf/src/vrx/vrx_urdf/vrx_gazebo -DCMAKE_INSTALL_PREFIX=/home/jfetko/bard/vlm-cbf/src/install/vrx_gazebo

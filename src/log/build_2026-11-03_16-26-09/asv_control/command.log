@@ -1,0 +1,2 @@
+Invoking command in '/home/jfetko/bard/vlm-cbf/src/build/asv_control': VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/jfetko/bard/vlm-cbf/src/asv_control -DCMAKE_INSTALL_PREFIX=/home/jfetko/bard/vlm-cbf/src/install/asv_control
+Invoked command in '/home/jfetko/bard/vlm-cbf/src/build/asv_control' returned '1': VIRTUAL_ENV_PROMPT=(venv) /usr/bin/cmake /home/jfetko/bard/vlm-cbf/src/asv_control -DCMAKE_INSTALL_PREFIX=/home/jfetko/bard/vlm-cbf/src/install/asv_control
