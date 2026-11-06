@@ -9,20 +9,44 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(tf2_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
 add_executable(gps_subscriber src/gps_subscriber.cpp)
+add_executable(state_estimator src/state_estimator.cpp)
 
 ament_target_dependencies(gps_subscriber
   rclcpp
   sensor_msgs
 )
 
+ament_target_dependencies(state_estimator
+  rclcpp
+  sensor_msgs
+  tf2_msgs
+  tf2
+  nav_msgs
+)
+
 install(TARGETS
   gps_subscriber
+  state_estimator
   DESTINATION lib/${PROJECT_NAME})
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/BodyVelocities.msg"
+  "msg/WorldRelativeState.msg"
+)
+
+rosidl_get_typesupport_target(cpp_typesupport_target
+  ${PROJECT_NAME} rosidl_typesupport_cpp)
+
+target_link_libraries(state_estimator "${cpp_typesupport_target}")
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -35,5 +59,10 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(DIRECTORY
+        launch
+        DESTINATION share/${PROJECT_NAME}/
+)
 
 ament_package()
