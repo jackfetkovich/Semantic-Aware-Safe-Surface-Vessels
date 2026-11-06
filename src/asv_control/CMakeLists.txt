@@ -1,3 +1,6 @@
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 cmake_minimum_required(VERSION 3.8)
 project(asv_control)
 
@@ -12,6 +15,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(tf2_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(nav_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -19,6 +23,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 add_executable(gps_subscriber src/gps_subscriber.cpp)
 add_executable(state_estimator src/state_estimator.cpp)
+add_executable(thrust_allocator src/thrust_allocator.cpp)
 
 ament_target_dependencies(gps_subscriber
   rclcpp
@@ -33,20 +38,29 @@ ament_target_dependencies(state_estimator
   nav_msgs
 )
 
+ament_target_dependencies(thrust_allocator
+  rclcpp
+  std_msgs
+)
+
 install(TARGETS
   gps_subscriber
   state_estimator
+  thrust_allocator
   DESTINATION lib/${PROJECT_NAME})
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/BodyVelocities.msg"
   "msg/WorldRelativeState.msg"
+  "msg/GoalWaypoint.msg"
+  "msg/Tau.msg"
 )
 
 rosidl_get_typesupport_target(cpp_typesupport_target
   ${PROJECT_NAME} rosidl_typesupport_cpp)
 
 target_link_libraries(state_estimator "${cpp_typesupport_target}")
+target_link_libraries(thrust_allocator "${cpp_typesupport_target}")
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

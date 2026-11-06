@@ -14,7 +14,7 @@ def generate_launch_description():
             ]),
             launch_arguments={
                 'urdf': '/home/jfetko/bard/vlm-cbf/src/odo_boat/wamv_with_odo.urdf',
-                'world': 'sydney_regatta',
+                'world': '/home/jfetko/bard/vlm-cbf/src/custom_world/my_world.sdf',
             }.items()
         ),
         ExecuteProcess(
